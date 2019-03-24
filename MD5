@@ -1,0 +1,8 @@
+0316e920913a0e32ce372bded737b9b7 *DESCRIPTION
+6601ce7e3e8911195b525d51128b3c61 *NAMESPACE
+3ff566d20aa0f6f64953227e5a42d03e *R/RcppExports.R
+9be3db0ac70ab60bf9fde7ac14356d75 *R/ksNN.R
+09b7a8e8925993b8817595eded97ac3b *man/ksNN.Rd
+ac06e12fdc2cd5bce0dbd7e90325ebfb *man/rcpp_ksNN.Rd
+001ea4438d7b115f2f23e0b437b05ae9 *src/RcppExports.cpp
+9ceaf37cb1b96a0b15c131d0eaaddefb *src/rcpp_ksNN.cpp
