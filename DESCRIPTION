@@ -2,7 +2,7 @@ Encoding: UTF-8
 Package: ksNN
 Type: Package
 Title: K* Nearest Neighbors Algorithm
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
             person("Kei","Nakagawa",email="kei.nak.0315@gmail.com",role=c("aut","cre"),comment = c(ORCID = "0000-0001-5046-8128")),
             person("Shingo","Sashida",email="gs449901@gmail.com",role=c("aut"))
@@ -14,11 +14,11 @@ Author: Kei Nakagawa [aut, cre] (<https://orcid.org/0000-0001-5046-8128>),
   Shingo Sashida [aut]
 Maintainer: Kei Nakagawa <kei.nak.0315@gmail.com>
 LazyData: TRUE
-Imports: stats, Rcpp
+Imports: Rcpp
 Depends: R(>= 3.0.2)
 LinkingTo: Rcpp(>= 0.10.6)
 RoxygenNote: 6.1.1
 NeedsCompilation: yes
-Packaged: 2019-03-20 09:00:41 UTC; SSunix
+Packaged: 2019-03-26 08:00:57 UTC; SSunix
 Repository: CRAN
-Date/Publication: 2019-03-24 17:40:03 UTC
+Date/Publication: 2019-03-26 11:10:03 UTC
