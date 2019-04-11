@@ -34,7 +34,7 @@
 #'   #the 'true' value
 #'   test_Y
 ksNN<-function(Label,Distance,L_C=1){
-
+  
   #sort the distance in ascending order
   ord<-order(Distance)
   Label<-Label[ord]
@@ -45,14 +45,14 @@ ksNN<-function(Label,Distance,L_C=1){
   k <- 0
 
   #calculate Lambda
-  lamda<-Distances[1] + 1
+  lambda<-Distances[1] + 1
 
   for (k in 1:n) {
-    if(lamda[k] > Distances[k]){
+    if(lambda[k] > Distances[k]){
       beta <- sum(Distances[1:k])
       beta2 <- sum(Distances[1:k]^2)
       tmp <- (1/k)*(beta + sqrt(k + (beta^2 - k*beta2 )))
-      lamda<-c(lamda,tmp)
+      lambda<-c(lambda,tmp)
     }
     else{
       break
@@ -61,13 +61,14 @@ ksNN<-function(Label,Distance,L_C=1){
 
   #calculate Alpha
   alpha <-numeric(0)
-  sum_lamda <- 0
+  sum_lambda <- 0
   i <- 0
+  tail_lambda <- lambda[length(lambda)]
 
   while(i<n){
-    if(Distances[i+1] < lamda[k]){
-      tmp = lamda[k] - Distances[i+1]
-      sum_lamda = sum_lamda + tmp
+    if(Distances[i+1] < tail_lambda){
+      tmp = tail_lambda - Distances[i+1]
+      sum_lambda = sum_lambda + tmp
       alpha<-c(alpha,tmp)
       i = i + 1
     }else{
@@ -75,7 +76,7 @@ ksNN<-function(Label,Distance,L_C=1){
     }
   }
 
-  alpha <- alpha/sum_lamda
+  alpha <- alpha/sum_lambda
   pred <- sum(alpha*Label[1:length(alpha)])
   return(list(pred=pred,alpha=alpha))
 }
